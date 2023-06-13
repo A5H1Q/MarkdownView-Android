@@ -9,6 +9,10 @@
 </p>
 
 
+#### NOTE: This is a rollbacked version of an existing library ([mukeshsolanki/MarkdownView-Android](https://github.com/mukeshsolanki/MarkdownView-Android)) with minor upgrades..
+
+
+      
 ![Demo](https://raw.githubusercontent.com/mukeshsolanki/MarkdownView-Android/master/Screenshots/demo.gif)
 
 # Supporting MarkdownView
@@ -21,23 +25,34 @@ MarkdownView is an independent project with ongoing development and support made
 <a href="https://www.patreon.com/bePatron?c=935498" alt="Become a Patron"><img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" /></a>
 
 ## Getting started
-Its really simple to integrate *MarkdownView* in android. All you need to do make the following change to you build gradle under the app module.
 
-Step 1. Add the JitPack repository to your build file. Add it in your root build.gradle at the end of repositories:
+Step 1. Add the JitPack repository to your settings.gradle file. under repositories of dependencyResolutionManagement. for eg:
 
 ```java
-allprojects {
-  repositories {
-    ...
-    maven { url "https://jitpack.io" }
-  }
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
 }
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://www.jitpack.io' }
+    }
+}
+rootProject.name = "DSA Examples"
+include ':app'
+
 ```
 
-Step 2. Add the dependency
+Step 2. Add this rollbacked version to dependency list of build.gradle
 ```java
 dependencies {
-    implementation 'com.github.mukeshsolanki:MarkdownView-Android:<latest-version>'
+    implementation 'com.github.A5H1Q:MarkdownView-Android:d6a66436ad'
 }
 ```
 
