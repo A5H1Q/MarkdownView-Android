@@ -44,7 +44,7 @@ dependencyResolutionManagement {
         maven { url 'https://www.jitpack.io' }
     }
 }
-rootProject.name = "DSA Examples"
+rootProject.name = "Blah Blah Blah...."
 include ':app'
 
 ```
